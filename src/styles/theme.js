@@ -8,6 +8,9 @@ export const theme = {
     lightBg: '#fff',
     darkBg: '#0A1128',
   },
-  fonts: {},
+  fonts: {
+    default: "'Open Sans', sans-serif",
+    secondary: "'Montserrat', sans-serif",
+  },
   spacings: {},
 };
