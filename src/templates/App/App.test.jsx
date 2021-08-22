@@ -4,7 +4,7 @@ import { renderTheme } from '../../styles/render-theme';
 import { theme } from '../../styles/theme';
 
 describe('<Home />', () => {
-  it('shold render home', () => {
+  it('shold render Home', () => {
     renderTheme(<Home />);
   });
 });
