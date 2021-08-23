@@ -28,15 +28,13 @@ export const theme = {
     lteMedium: '(max-width: 768px)',
   },
   spacings: {
-    sizes: {
-      xsmall: '.8rem',
-      small: '1.6rem',
-      medium: '2.4rem',
-      large: '3.2rem',
-      xlarge: '4rem',
-      xzlarge: '4.8rem',
-      huge: '5.6rem',
-      xhuge: '6.4rem',
-    },
+    xsmall: '.8rem',
+    small: '1.6rem',
+    medium: '2.4rem',
+    large: '3.2rem',
+    xlarge: '4rem',
+    xzlarge: '4.8rem',
+    huge: '5.6rem',
+    xhuge: '6.4rem',
   },
 };
