@@ -1,4 +1,8 @@
-import { mapSections, mapSectionTwoColumns } from './map-sections';
+import {
+  mapSectionContent,
+  mapSections,
+  mapSectionTwoColumns,
+} from './map-sections';
 
 describe('map-sections', () => {
   it('should render predefined section if no data', () => {
@@ -60,5 +64,36 @@ describe('map-sections', () => {
     expect(data.sectionId).toBe('contact');
     expect(data.srcImg).toBe('a.svg');
     expect(data.text).toBe('To wrap up January, we');
+  });
+
+  it('should map section content with no data', () => {
+    const data = mapSectionContent();
+    expect(data.component).toBe('');
+    expect(data.title).toBe('');
+    expect(data.html).toBe('');
+    expect(data.background).toBe(false);
+    expect(data.sectionId).toBe('');
+  });
+
+  it('should map section content', () => {
+    const data = mapSectionContent({
+      __component: 'section.section-content',
+      _id: '602fdf2d540c00269e056177',
+      title: 'Pricing',
+      content: '<p>The release of Apple Silicon-based</p>',
+      metadata: {
+        background: false,
+        _id: '602fdf2d540c00269e056179',
+        name: 'pricing',
+        section_id: 'pricing',
+        __v: 0,
+        id: '602fdf2d540c00269e056179',
+      },
+    });
+    expect(data.component).toBe('section.section-content');
+    expect(data.title).toBe('Pricing');
+    expect(data.html).toBe('<p>The release of Apple Silicon-based</p>');
+    expect(data.background).toBe(false);
+    expect(data.sectionId).toBe('pricing');
   });
 });
