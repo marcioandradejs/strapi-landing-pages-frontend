@@ -51,9 +51,8 @@ function Home() {
       {sections.map((section, index) => {
         const { component } = section;
         const key = `${slug}-${index}`;
-        console.log(component);
 
-        if (component === 'section.section-two-columns') {
+        if (component === 'section.section-two-collumns') {
           return <GridTwoColumn key={key} {...section} />;
         }
 
