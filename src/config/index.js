@@ -1,5 +1,5 @@
 export default {
-  url: 'http://localhost:1337/pages/?slug=',
+  url: 'https://strapi-landing-pages-321321.herokuapp.com/pages/?slug=',
   siteName: 'Marcio Andrade',
   defaultSlug: 'landing-page',
 };
