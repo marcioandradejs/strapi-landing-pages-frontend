@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Heading } from '../../components/Heading';
-import { GridTwoColumn } from '../../components/GridTwoColumn';
+import { GridTwoColumns } from '../../components/GridTwoColumns';
 import { Base } from '../Base';
 import { mockBase } from '../Base/mock';
 import * as Styled from './styles';
@@ -32,7 +32,7 @@ function Home() {
     };
 
     load();
-  }, [location.pathname]);
+  }, [location]);
 
   if (data === undefined) {
     return <PageNotFound />;
@@ -56,7 +56,7 @@ function Home() {
         const key = `${slug}-${index}`;
 
         if (component === 'section.section-two-collumns') {
-          return <GridTwoColumn key={key} {...section} />;
+          return <GridTwoColumns key={key} {...section} />;
         }
 
         if (component === 'section.section-content') {

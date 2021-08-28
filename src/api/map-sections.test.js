@@ -16,7 +16,7 @@ describe('map-sections', () => {
 
   it('should render sections with correct data', () => {
     const data = mapSections(pagesFakeData[0].sections);
-    expect(data[0].component).toBe('section.section-two-columns');
+    expect(data[0].component).toBe('section.section-two-collumns');
   });
 
   it('should test sections with invalid data', () => {
